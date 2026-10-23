@@ -1,0 +1,2 @@
+[functions.submit-rsvp]
+verify_jwt = false

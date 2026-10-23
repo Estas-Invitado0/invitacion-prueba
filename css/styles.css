@@ -1,0 +1,293 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #382c34;
+  background: #fff8f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  --accent: #a33c67;
+  --accent-dark: #7d294d;
+  --ink: #382c34;
+  --muted: #756a70;
+  --line: #eadde2;
+  --surface: #ffffff;
+  --soft: #fbf0f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px 16px;
+  display: grid;
+  place-items: center;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 8vw, 3.2rem);
+  line-height: 1.1;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+.invitation-card,
+.form-card,
+.admin-shell {
+  width: min(100%, 680px);
+  padding: clamp(24px, 6vw, 48px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface);
+  box-shadow: 0 14px 40px rgb(75 43 58 / 8%);
+}
+
+.invitation-card {
+  text-align: center;
+}
+
+.form-card {
+  width: min(100%, 540px);
+}
+
+.login-card {
+  width: min(100%, 480px);
+}
+
+.eyebrow {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.intro,
+.closing {
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.event-details {
+  display: grid;
+  gap: 14px;
+  margin: 30px 0;
+  padding: 22px;
+  border-radius: 16px;
+  background: var(--soft);
+}
+
+.event-details div {
+  display: grid;
+  gap: 5px;
+}
+
+.event-details dt {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.event-details dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.closing {
+  margin-bottom: 22px;
+}
+
+.helper,
+.muted {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.helper {
+  margin: 16px 0 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: var(--accent-dark);
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+form {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+form > label,
+.panel-section > label {
+  margin-top: 5px;
+  font-weight: 700;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #cfc1c8;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgb(163 60 103 / 28%);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+
+fieldset {
+  display: grid;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+legend {
+  padding: 0 5px;
+  font-weight: 700;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 32px;
+}
+
+.choice input {
+  width: 20px;
+  min-height: 20px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.button-primary:hover {
+  background: var(--accent-dark);
+}
+
+.button-secondary {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--accent-dark);
+}
+
+.button-secondary:hover {
+  background: var(--soft);
+}
+
+.button-large {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 12px;
+  font-size: 1.05rem;
+}
+
+button:disabled,
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.notice {
+  margin: 18px 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--soft);
+  line-height: 1.5;
+}
+
+.notice.error {
+  border-color: #e4a8a8;
+  background: #fff1f1;
+  color: #7f2525;
+}
+
+.notice.success {
+  border-color: #a9cfb4;
+  background: #f0faf2;
+  color: #205a31;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .invitation-card,
+  .form-card,
+  .admin-shell {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+}

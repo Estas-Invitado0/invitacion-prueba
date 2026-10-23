@@ -1,0 +1,129 @@
+.admin-shell {
+  width: min(100%, 1120px);
+  padding: clamp(20px, 4vw, 40px);
+}
+
+.admin-header,
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.admin-header {
+  margin-bottom: 26px;
+}
+
+.admin-header h1 {
+  margin-bottom: 6px;
+}
+
+.admin-header p {
+  margin-bottom: 0;
+}
+
+.panel-section {
+  margin-top: 24px;
+}
+
+.panel-section > label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.summary-card {
+  display: grid;
+  gap: 10px;
+  min-height: 104px;
+  align-content: center;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--soft);
+}
+
+.summary-card span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.summary-card strong {
+  font-size: 1.8rem;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading p {
+  margin-bottom: 0;
+}
+
+.table-wrap {
+  width: 100%;
+  margin-top: 16px;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  background: #fff;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th {
+  background: var(--soft);
+  font-size: 0.9rem;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.empty-state {
+  padding: 26px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .admin-header,
+  .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-header .button,
+  .section-heading .button {
+    width: 100%;
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .summary-card {
+    min-height: 92px;
+    padding: 14px;
+  }
+}

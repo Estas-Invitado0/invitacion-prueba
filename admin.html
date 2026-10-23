@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#fff8f2">
+  <title>Panel de respuestas</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">Panel de administración</p>
+        <h1>Respuestas</h1>
+        <p id="organizer-email" class="muted"></p>
+      </div>
+      <button id="logout-button" class="button button-secondary" type="button">Cerrar sesión</button>
+    </header>
+
+    <div id="admin-message" class="notice" role="status" aria-live="polite" hidden></div>
+
+    <section class="panel-section" aria-labelledby="event-heading">
+      <label id="event-heading" for="event-select">Evento</label>
+      <select id="event-select" disabled>
+        <option value="">Cargando eventos…</option>
+      </select>
+    </section>
+
+    <section class="summary-grid" aria-label="Resumen de respuestas">
+      <article class="summary-card">
+        <span>Confirmadas</span>
+        <strong id="count-yes">—</strong>
+      </article>
+      <article class="summary-card">
+        <span>Rechazadas</span>
+        <strong id="count-no">—</strong>
+      </article>
+      <article class="summary-card">
+        <span>Pendientes</span>
+        <strong id="count-pending">—</strong>
+      </article>
+      <article class="summary-card">
+        <span>Total invitaciones</span>
+        <strong id="count-total">—</strong>
+      </article>
+    </section>
+
+    <section class="panel-section guest-section" aria-labelledby="guest-heading">
+      <div class="section-heading">
+        <div>
+          <h2 id="guest-heading">Lista de invitados</h2>
+          <p class="muted">La lista se filtra por nombre, respuesta o comentario.</p>
+        </div>
+        <button id="copy-list" class="button button-secondary" type="button" disabled>Copiar lista</button>
+      </div>
+      <label class="visually-hidden" for="guest-search">Buscar invitados</label>
+      <input id="guest-search" type="search" placeholder="Buscar invitados…" autocomplete="off" disabled>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Invitado</th>
+              <th scope="col">Asistencia</th>
+              <th scope="col">Acompañantes</th>
+              <th scope="col">Comentario</th>
+            </tr>
+          </thead>
+          <tbody id="guest-list">
+            <tr><td colspan="4" class="empty-state">Cargando respuestas…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#fff8f2">
+  <title>Confirmar asistencia</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="form-card">
+    <a class="back-link" href="index.html">← Volver a la invitación</a>
+    <p class="eyebrow">Nos encantará verte</p>
+    <h1>Confirma tu asistencia</h1>
+    <p class="intro">Completa tus datos antes de enviar tu respuesta.</p>
+
+    <div id="form-message" class="notice" role="status" aria-live="polite" hidden></div>
+
+    <form id="rsvp-form">
+      <label for="first-name">Nombre</label>
+      <input id="first-name" name="first_name" type="text" maxlength="80" autocomplete="given-name" required>
+
+      <label for="last-name">Apellido</label>
+      <input id="last-name" name="last_name" type="text" maxlength="80" autocomplete="family-name" required>
+
+      <fieldset>
+        <legend>¿Podrás asistir?</legend>
+        <label class="choice"><input type="radio" name="attending" value="yes" required> Sí, allí estaré</label>
+        <label class="choice"><input type="radio" name="attending" value="no" required> No podré asistir</label>
+      </fieldset>
+
+      <label for="companions">Cantidad de acompañantes</label>
+      <input id="companions" name="companions" type="number" min="0" max="10" value="0" inputmode="numeric" required>
+
+      <label for="comment">Comentario <span class="muted">(opcional)</span></label>
+      <textarea id="comment" name="comment" maxlength="500" rows="4"></textarea>
+
+      <button class="button button-primary button-large" type="submit">Enviar respuesta</button>
+    </form>
+  </main>
+  <script type="module" src="js/confirmar.js"></script>
+</body>
+</html>
